@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>My CRM prog</h1>
-    <a href="/contacts">Contacts</a>
-  </body>
-</html>
+<% @contacts.each do |contact| %>
+<ul>
+  <li><p><%= contact.full_name %> (<%= contact.email %>)</p>
+  <!-- <li><p><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)</p> -->
+    <a href="#">Edit</a>
+    |
+    <a href="#">Delete</a></li>
+</ul>
+<% end %>

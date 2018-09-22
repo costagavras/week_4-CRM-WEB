@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <% @contacts.each do |contact| %>
-    <ul>
-      <li><%= contact.first_name %></li>
-      <li><%= contact.last_name %></li>
-      <li><%= contact.email %></li>
-      <li><%= contact.note %></li>
-    </ul>
-    <% end %>
-
-    <a href="/">Home</a>
-  </body>
-</html>
+<% @contacts.each do |contact| %>
+<ul>
+  <li><p><%= contact.full_name %> (<%= contact.email %>)</p>
+  <!-- <li><p><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)</p> -->
+    <a href="#">Edit</a>
+    |
+    <a href="#">Delete</a></li>
+</ul>
+<% end %>

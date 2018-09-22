@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+font-family: 'Arial';
+}
+
+footer {
+  padding: 15px;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+body > p {
+    font-size: 20px;
+    color: black;
+    background-color: rgb(193,75,42);
+    padding: 10px;
+    margin: 20px 50px 15px 50px;
+}
+
+li {
+  font-size: 30px;
+  color: black;
+  background-color: rgb(55,239,230);
+  padding: 10px;
+  margin: 0px 50px 15px 50px;
+  list-style: none;
+}
+
+ul{
+  padding: 0;
+}
+ul > li > a:hover {
+  background-color: yellow;
+}
+
+ul > li > a {
+  font-size: 20px;
+  margin: 5px 2px 2px 0px;
+}
+
+ul > li > a:first-of-type {
+  margin: 5px 2px 2px 15px;
+}
+
+ul > li > p {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 3px 1px 3px 15px;
+}
+
+span {
+  font-size: 20px;
+  text-decoration: underline rgb(55,239,230);
+  font-weight: bold;
+}
+
+h1, h2 {
+  margin: 0 0 2px 0;
+}
+
+h1  {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2  {
+  padding: 15px;
+  color: white;
+  background-color: rgb(190, 198, 206);
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
