@@ -4,8 +4,10 @@
 <ul>
   <li><p><%= contact.full_name %> (<%= contact.email %>)</p>
   <!-- <li><p><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)</p> -->
-    <a href="contacts/<%= contact.id %>">Edit</a>
+    <a href="contacts/<%= contact.id %>">Show</a>
     |
-    <a href="contacts/<%= contact.id %>">Delete</a></li>
+    <a href="contacts/<%= contact.id %>/edit">Edit</a>
+    <!-- |
+    <a href="contacts/<%= contact.id %>">Delete</a></li> -->
 </ul>
 <% end %>

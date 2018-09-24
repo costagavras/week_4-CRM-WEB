@@ -26,6 +26,7 @@ get '/contacts' do
   erb :contacts
 end
 
+# finding the contact (READ)
 get '/contacts/:id' do
   # params[:id] contains the id from the URL
   @contact = Contact.find_by({id: params[:id].to_i})
@@ -36,6 +37,7 @@ get '/contacts/:id' do
   end
 end
 
+# creation of a new contact (CREATE)
 post '/contacts' do
   Contact.create(
     first_name: params[:first_name],
@@ -47,6 +49,7 @@ post '/contacts' do
   redirect to('/contacts')
 end
 
+# update the contact (UPDATE) (find bit)
 get '/contacts/:id/edit' do
   @contact = Contact.find_by(id: params[:id].to_i)
   if @contact
@@ -56,6 +59,7 @@ get '/contacts/:id/edit' do
   end
 end
 
+#  update the contact (UPDATE) (update bit)
 put '/contacts/:id' do
   @contact = Contact.find_by(id: params[:id].to_i)
   if @contact
@@ -66,6 +70,16 @@ put '/contacts/:id' do
     note:       params[:note]
     )
 
+    redirect to('/contacts')
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+delete '/contacts/:id' do
+  @contact = Contact.find_by(id: params[:id].to_i)
+  if @contact
+    @contact.delete
     redirect to('/contacts')
   else
     raise Sinatra::NotFound
