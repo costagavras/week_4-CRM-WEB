@@ -1,3 +1,5 @@
+<p>There are <span><%= @contacts.length %></span> contacts</p>
+
 <% @contacts.each do |contact| %>
 <ul>
   <li><p><%= contact.full_name %> (<%= contact.email %>)</p>

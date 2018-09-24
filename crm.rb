@@ -10,10 +10,12 @@ get '/about' do
   erb :about
 end
 
+get '/contacts/new' do
+  erb :new
+end
+
 get '/index' do
-  # create an instance variable containing a collection of all the contacts in your database.
-  @contacts = Contact.all
-  # passing all the data
+
   erb :index
 end
 
