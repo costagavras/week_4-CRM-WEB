@@ -20,18 +20,3 @@ class Contact < ActiveRecord::Base # inherits properties from ActiveRecord
 end
 
 Contact.auto_upgrade!
-
-# jim = Contact.create("Jim", "Hacker", "jim.hacker@daa.co.uk", "Minister")
-# humphrey = Contact.create("Humphrey", "Appleby", "humphrey.appleby@civilservice.co.uk", "Permanent Secretary")
-# bernard = Contact.create("Bernard", "Woolley", "bernard.woolley@civilservice.co.uk", "Private Secretary")
-# puts "The class now contains:"
-# puts Contact.all.inspect
-# puts humphrey.delete #returns memory pointer of the deleted item
-# puts jim.full_name
-# # Contact.delete_all
-# # puts "The class now contains:"
-# # puts Contact.all.inspect
-# puts Contact.find(3)
-# puts Contact.find_by("last_name", "Woolley")
-# puts jim.update("first_name", "James")
-# puts Contact.all.inspect

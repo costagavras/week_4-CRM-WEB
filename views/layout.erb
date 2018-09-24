@@ -5,28 +5,23 @@
     <link rel="stylesheet" href="/styles.css">
     <title>My CRM</title>
     <h1>MY CRM</h1>
-    <h2>Home</h2>
-    <h2>Add a contact</h2>
-    <h2>About</h2>
+    <h2><a href="/contacts" style="
+          color: white;
+          text-decoration: none;
+      ">Home</a></h2>
+    <h2><a href="#" style="
+          color: white;
+          text-decoration: none;
+      ">Add a contact</a></h2>
+    <h2><a href="/about" style="
+          color: white;
+          text-decoration: none;
+      ">About</a></h2>
   </head>
   <body>
-    <p>There are <span><%= @contacts.length %></span> contacts</p>
-      <!-- <div class="contacts">
-        <ul>
-          <li><p>Contact1</p>
-            <a href="#">Edit</a>
-            |
-            <a href="#">Delete</a></li>
-          <li><p>Contact 2</p>
-            <a href="#">Edit</a>
-            |
-            <a href="#">Delete</a></li>
-          <li><p>Contact 2</p>
-            <a href="#">Edit</a>
-            |
-            <a href="#">Delete</a></li>
-        </ul>
-      </div> -->
+      <p>There are <span><%= Contact.all.length %></span> contacts</p>
+
+
       <%= yield %>
   </body>
   <footer>&copy; Bitmaker 2016</footer>
